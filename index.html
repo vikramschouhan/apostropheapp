@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Apostrophe Residents</title>
+  <link rel="icon" href="img/apostrophe.png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+
+    @media (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 1000px;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 650px;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="http://www.apostropheresidents.co.in" target="_blank">
+        <img src="img/ApostropheFullW.png" height="60" alt="apostrophe logo">
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Full Page Intro -->
+  <div class="view full-page-intro" style="background-image: url('img/11.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+      <!-- Content -->
+      <div class="container">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 white-text text-center text-md-left">
+            <img src="img/ApostropheFullW.png" height="110" alt="apostrophe logo">
+            <h1 class="display-4 font-weight-bold">5
+              <sup>th</sup> Foundation Day</h1>
+            <hr class="hr-light">
+            <p>
+              <strong>Saturday, March 16
+                <sup>th</sup> 2019, 6 PM Onwards</strong>
+            </p>
+
+            <p class="mb-4 d-none d-md-block">
+              <strong>Apostrophe Lawns</strong>
+            </p>
+
+            <a href="#newA" class="btn btn-pink btn-lg">See Event Details
+              <i class="fas fa-birthday-cake ml-2"></i>
+            </a>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-5 mb-4">
+
+            <!--Card-->
+            <div class="card">
+
+              <!--Card content-->
+              <div class="card-body">
+
+                <!-- Form -->
+                <form name="subForm" id="subForm" class="needs-validation" novalidate>
+                  <!-- Heading -->
+                  <h3 class="dark-grey-text text-center">
+                    <strong>Confirm Your Presence:</strong>
+                  </h3>
+                  <hr>
+
+                  <div class="md-form">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="txtName" class="form-control" maxlength="20" title="Please enter name" required>
+                    <label for="form3">Name</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="text" id="txtEmail" class="form-control" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address">
+                    <label for="txtPhone">Email</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-mobile prefix grey-text" data-toggle="tooltip" title="Please enter 10 digit mobile number"></i>
+                    <input type="text" id="txtPhone" class="form-control" pattern="^[6-9]\d{9}$" title="Invalid Mobile Number" required>
+                    <label for="txtPhone">Contact Number</label>
+                  </div>
+
+                  <div class="md-form">
+                    <i class="fas fa-building prefix grey-text" data-toggle="tooltip" title="Please enter Appartment in format Building-FlatNo example: F-802"></i>
+                    <input type="text" id="txtAppartment" class="form-control" title="Enter Appartment Number in correct format" required>
+                    <label for="txtAppartment">Appartment In Format A-101</label>
+                  </div>
+
+
+                  <div class="custom-control custom-switch text-center">
+
+                    <input type="checkbox" class="custom-control-input" id="isAttending" onchange="enableFields();">
+                    <label class="custom-control-label h5 grey-text" for="isAttending">We are Attending Event</label>
+                  </div>
+
+
+
+                  <div class="md-form">
+                    <i class="fas fa-user-friends prefix grey-text" data-toggle="tooltip" title="Please mention number of adults attending the event."></i>
+                    <input type="text" id="txtAdult" class="form-control" pattern="^\d$|^[1][0]$" title="Please enter number between 1-10" required
+                      disabled>
+                    <label for="txtAdult">Adults Count</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-child prefix grey-text" data-toggle="tooltip" title="Please mention number of Children attending the event."></i>
+                    <input type="text" id="txtChild" class="form-control" pattern="^\d$|^[1][0]$" title="Please enter number between 1-10" disabled
+                      required>
+                    <label for="txtChild">Kids Count (4Yr and above)</label>
+                  </div>
+
+                  <div class="md-form" id="sucessMessage"></div>
+
+                  <div class="text-center">
+                    <button id="btnSend" onclick="return sendMail()" class="btn btn-pink">Confirm</button>
+
+                  </div>
+
+                </form>
+                <!-- Form -->
+
+              </div>
+
+            </div>
+            <!--/.Card-->
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+      <!-- Content -->
+
+    </div>
+    <!-- Mask & flexbox options-->
+
+  </div>
+  <!-- Full Page Intro -->
+
+  <!--Main layout-->
+
+
+  <main>
+    <div class="container" id="newA">
+
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <img src="img/5years.jpg" class="img-fluid z-depth-1-half" alt="">
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h3 class="h3 mb-3">5th Society Foundation Day Celebration
+            </h3>
+            <div style="height:25px"></div>
+            <!--First row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-glass-cheers fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Event: Apostrophe 5-Year Society Foundation Day</h5>
+              </div>
+            </div>
+            <div style="height:20px"></div>
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-compass fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Venue: Apostrophe Lawns, Wakad, Pune 411057</h5>
+              </div>
+            </div>
+            <div style="height:20px"></div>
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-calendar-check fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Date: 16
+                  <sup>th</sup> March 2019, Saturday</h5>
+              </div>
+            </div>
+            <div style="height:20px"></div>
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-clock fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Time: 6 PM Onwards</h5>
+              </div>
+            </div>
+            <div style="height:20px"></div>
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-users fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Themed as N E W S, Celebrating Apostrophe's Strength, Our True Cosmo Culture... </h5>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </section>
+      <!--Section: Main info-->
+
+      <hr class="my-5">
+
+      <!--Section: Main features & Quick Start-->
+      <section>
+
+        <h3 class="h3 text-center mb-5">Food</h3>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 px-4">
+
+            <!--First row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-utensils fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Foods of India</h5>
+                <p class="grey-text">Enjoy Pure Vegetarian food from N E W S regions to celebrate Apostrophe's Cosmo Culture.</p>
+              </div>
+            </div>
+            <!--/First row-->
+            <div style="height:10px"></div>
+            <!--Fourth row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-cocktail fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Mocktails & Starters</h5>
+                <p class="grey-text">Variety of mocktails and Starters to choose from.
+              </div>
+            </div>
+            <!--/Fourth row-->
+
+            <div style="height:10px"></div>
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-hamburger fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Street Food Stalls</h5>
+                <p class="grey-text">Yummy Dosa, Chat, Noodles, Pav-Bhaji and much more...
+                </p>
+              </div>
+            </div>
+            <!--/Second row-->
+
+            <div style="height:10px"></div>
+
+            <!--Third row-->
+            <div class="row">
+              <div class="col-1 mr-3">
+                <i class="fas fa-cookie-bite fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Sweets</h5>
+                <p class="grey-text">Kuch Meetha ho jaaye
+              </div>
+            </div>
+            <!--/Third row-->
+            <div style="height:10px"></div>
+
+          </div>
+          <!--/Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <img src="img/FoodFinal.jpg" class="img-fluid z-depth-1-half" alt="">
+          </div>
+          <!--/Grid column-->
+
+        </div>
+        <!--/Grid row-->
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+
+      <hr class="my-5">
+
+      <!--Section: Not enough-->
+      <section>
+
+        <h2 class="my-5 h3 text-center">Karaoke</h2>
+
+        <!--First row-->
+        <div class="row features-small mb-5 mt-3 wow fadeIn">
+
+          <!--First column-->
+          <div class="col-md-4">
+            <!--First row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-microphone-alt fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Live Performances</h5>
+                <p class="grey-text">Enjoy live performance by our own Apostrophe stars.
+                </p>
+                <div style="height:20px"></div>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-music fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title"> Variety of Music</h5>
+                <p class="grey-text">Get ready to thrill on new and old songs, immerse in sounds of Gazels.
+                </p>
+                <div style="height:20px"></div>
+              </div>
+            </div>
+            <!--/Second row-->
+
+
+          </div>
+          <!--/First column-->
+
+          <!--Second column-->
+          <div class="col-md-4 flex-center">
+            <img src="img/Karaoke2.jpg" alt="MDB Magazine Template displayed on iPhone" class="z-depth-0 img-fluid">
+          </div>
+          <!--/Second column-->
+
+          <!--Third column-->
+          <div class="col-md-4 mt-2">
+            <!--First row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-list fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Songs on Request
+                  <p class="grey-text">Request your favorite numbers for a personalized indulgence.
+                    <div style="height:20px"></div>
+              </div>
+            </div>
+            <!--/First row-->
+
+            <!--Second row-->
+            <div class="row">
+              <div class="col-2">
+                <i class="fas fa-user-ninja fa-2x pink-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Couple Dance</h5>
+                <p class="grey-text">Get romantic and dance on the tunes of Bollywood numbers.
+                  <div style="height:20px"></div>
+              </div>
+            </div>
+            <!--/Second row-->
+
+
+          </div>
+          <!--/Third column-->
+
+        </div>
+        <!--/First row-->
+
+      </section>
+      <!--Section: Not enough-->
+
+      <hr class="mb-5">
+
+
+      <section>
+
+        <h2 class="my-5 h3 text-center">Dress Code: Indian Traditional</h2>
+        <h5 class="h5 mb1 text-center grey-text"> Females- Ideas(Saree, Regional Costumes)</h5>
+        <h5 class="h5 mb1 text-center grey-text"> Males- Ideas(Sherwaani, Kurtas Paijama, Pathani)</h5>
+
+        <!--Second column-->
+        <div class="flex-center">
+          <img src="img/Dress11.jpg" style="width: 500px" class="z-depth-0 img-fluid">
+        </div>
+        <!--/Second column-->
+
+
+
+    </div>
+    <!--/First row-->
+
+    </section>
+    <!--Section: Dress Code-->
+
+
+
+    <hr class="mb-5">
+
+
+    <!--Section: More-->
+    <section>
+
+      <h2 class="my-5 h3 text-center">...and even more</h2>
+
+      <!--First row-->
+      <div class="row features-small mt-5 wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-chalkboard-teacher fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2 pl-3">
+              <h5 class="feature-title font-bold mb-1">Society Presentation </h5>
+              <p class="grey-text mt-2">Mr. Chary will take us through Apostrophe's Interesting 5-year journey of success and failures
+              </p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-film fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Skit & Music</h5>
+              <p class="grey-text mt-2"> Our talented performers take you into journey from past in a Musical way
+              </p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-user-ninja fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Dance & Masti</h5>
+              <p class="grey-text mt-2"> Dance and Masti on the tunes of Bollywood songs.
+              </p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-user-graduate fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Committee Felicitation </h5>
+              <p class="grey-text mt-2">They have worked damm hard and smart. Now it’s time to thank our Committee members for their contributions
+              </p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+      </div>
+      <!--/First row-->
+
+      <!--Second row-->
+      <div class="row features-small mt-4 wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-award fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Staff Reward</h5>
+              <p class="grey-text mt-2">Apostrophe can never be complete without its work-staff who have always worked on their toes to make Apostrophe
+                one of the best places to live.</p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-dice fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Kids Fun</h5>
+              <p class="grey-text mt-2"> Games and fun for kids of all ages.
+              </p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-grin-hearts fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Games</h5>
+              <p class="grey-text mt-2">Play time for Residents to bring that winning Spirit back</p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-xl-3 col-lg-6">
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-2">
+              <i class="fas fa-holly-berry fa-2x mb-1 pink-text" aria-hidden="true"></i>
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="feature-title font-bold mb-1">Decorations</h5>
+              <p class="grey-text mt-2">Apostrophe will shine and glow with colors to celebrate its 5th Birthday</p>
+            </div>
+          </div>
+          <!--/Grid row-->
+        </div>
+        <!--/Grid column-->
+
+      </div>
+      <!--/Second row-->
+
+    </section>
+    <!--Section: More-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!-- Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" role="button" data-toggle="modal" data-target="#frameModalBottom" data-backdrop="true">Contact
+        <i class="fas fa-comment-dots ml-2"></i>
+      </a>
+
+      <!--/.Call to action-->
+
+      <hr class="my-4">
+
+
+      <!-- Frame Modal Bottom -->
+      <div class="modal fade bottom" id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+        <div class="modal-dialog modal-frame modal-bottom" role="document">
+
+
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row d-flex justify-content-center align-items-center">
+                <p class="h4 pink-text"> Reach us @ apostrophe5thfoundationday@gmail.com or Anjali @ 9922001797 Parul @ 7387094935 for any queries.
+                </p>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Frame Modal Bottom -->
+
+
+
+
+      <!--Copyright-->
+      <div class="footer-copyright py-3">
+        © 2019 ApostropheResidents.co.in
+      </div>
+      <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+
+
+
+    function enableFields() {
+
+      var formEmail = document.getElementById("subForm");
+      var isAttending = formEmail.elements.namedItem("isAttending").checked;
+
+      formEmail.elements.namedItem("txtAdult").disabled = !isAttending;
+      formEmail.elements.namedItem("txtChild").disabled = !isAttending;
+      formEmail.elements.namedItem("txtAdult").value = "";
+      formEmail.elements.namedItem("txtChild").value = "";
+    }
+
+
+    function sendMail() {
+
+      var formEmail = document.getElementById("subForm");
+      if (!formEmail.checkValidity()) {
+        return;
+      }
+
+
+      frmName = document.getElementById("subForm").elements.namedItem("txtName").value;
+      frmEmail = formEmail.elements.namedItem("txtEmail").value;
+      frmPhone = formEmail.elements.namedItem("txtPhone").value;
+      frmAppartment = formEmail.elements.namedItem("txtAppartment").value;
+      frmAdultCount = formEmail.elements.namedItem("txtAdult").value;
+      frmChildCount = formEmail.elements.namedItem("txtChild").value;
+
+      frmAttending = "<font color='red'><b> No  </b></font>";
+
+      if (formEmail.elements.namedItem("isAttending").checked) {
+        frmAttending = "<font color='green'><b> Yes  </b> </font>";
+      }
+
+      frmMessage = "<b>Name </b>:" + frmName +
+        "<br/> <b>Contact Number: </b>" + frmPhone +
+        "<br/> <b>Email: </b>" + frmEmail +
+        "<br/> <b>Appartment: </b>" + frmAppartment +
+        "<br/> <b>Attending: </b>" + frmAttending +
+        "<br/> <b>Adult: </b>" + frmAdultCount +
+        "<br/> <b>Children: </b>" + frmChildCount;
+
+      var template_params = {
+        "reply_to": frmEmail,
+        "from_name": frmName,
+        "to_name": " Organizing Committee ",
+        "message_html": frmMessage
+      }
+
+      var service_id = "default_service";
+      var template_id = "template_7RqBLgac";
+      emailjs.send(service_id, template_id, template_params);
+      var stringSucess = "<div class='alert alert-success alert-dismissible fade show' role='alert'><strong> Thanks " + frmName + " for Confirmation. Your details have been sent sucessfully.<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
+      document.getElementById("sucessMessage").innerHTML = stringSucess;
+      return false;
+    }
+
+
+
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+
+  </script>
+
+
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    (function () {
+      emailjs.init("user_ZnTlWqC0FhKXqzT9XpkLP");
+      $('[data-toggle="tooltip"]').tooltip()
+      new WOW().init();
+
+    })();
+
+  </script>
+
+
+
+
+</body>
+
+</html>
